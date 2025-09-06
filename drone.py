@@ -17,7 +17,7 @@ class Drone:
         lb = np.clip(self.t - 0.05, 0,1)
         ub = np.clip(self.t + 0.05, 0,1)
 
-        res = minimize_scalar(dist_fun, bounds = (lb,ub))
+        res = minimize_scalar(dist_fun, bounds=(lb,ub))
         self.t = res.x
 
     def distance(self,track):

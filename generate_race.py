@@ -28,5 +28,5 @@ def generate_race(track_id, drone):
     win_event.terminal = True
     lose_event.terminal = True
 
-    sol = solve_ivp(ode_fun,[0.0,10000.0],u0, max_step = 10, events=[win_event,lose_event], dense_output=True)
+    sol = solve_ivp(ode_fun,[0.0,10000.0],u0, max_step = 1, events=[win_event,lose_event], dense_output=True)
     return sol
